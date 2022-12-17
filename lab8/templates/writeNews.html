@@ -1,0 +1,28 @@
+{{ define "writeNews"}}
+
+
+{{ template "header" }}
+<form style="width: 500px; position: absolute; margin-left: 740px" role="form" method="POST" action="/saveNews">
+    <div class="row">
+        <div class="col-xs-4">
+            <div class="form-group">
+                <label style="color: #2f2f2f" for="exampleFormControlInput1">Заголовок:</label>
+                <input type="text" name="title" class="form-control" id="exampleFormControlInput1">
+            </div>
+            <div class="form-group">
+                <label style="color: #2f2f2f" for="exampleFormControlTextarea1">До заголовку:</label>
+                <textarea class="form-control" name="content" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label style="color: #2f2f2f" for="exampleFormControlTextarea1">Весь контент:</label>
+                <textarea class="form-control" name="contentAll" id="exampleFormControlTextarea2" rows="3"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-6">
+        <button class="btn btn-secondary" type="submit">Створити</button>
+    </div>
+</form>
+
+
+{{ end }}

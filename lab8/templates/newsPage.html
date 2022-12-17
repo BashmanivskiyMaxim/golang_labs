@@ -1,0 +1,22 @@
+{{ define "newsPage" }}
+
+{{ template "header" }}
+
+{{ range $key, $value := .}}
+<style>
+    body {
+        background-color: #059595;
+    }
+</style>
+<div class="card" style="width: 1300px; margin: 50px 0px 50px 300px">
+    <div class="card-body">
+        <h2 style="color: #2f2f2f" class="card-title">{{ $value.Title }}</h2>
+        <p style="color: #2f2f2f" class="card-text">{{ $value.Content }}</p>
+        <a href="/newsOne/?id={{ $value.Id }}" class="btn btn-success">Більше</a>
+    </div>
+</div>
+{{ end }}
+
+{{ template "footer" }}
+
+{{ end }}
